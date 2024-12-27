@@ -8,7 +8,7 @@ const currency = z
     'Price must have exactly two decimal places'
   )
 // schema for inserting products into the database
-export const insertProductSchema = z.object({
+const insertProductSchema = z.object({
   name: z.string().min(3, 'Name must be at least 3 characters'),
   slug: z.string().min(3, 'Slug must be at least 3 characters'),
   category: z.string().min(3, 'Category must be at least 3 characters'),
@@ -21,4 +21,12 @@ export const insertProductSchema = z.object({
   price: currency,
 })
 
-export type InsertProductSchema = z.infer<typeof insertProductSchema>
+// schema for signing users in
+const loginFormSchema = z.object({
+  email: z.string().email('Email must be a valid email'),
+  password: z.string().min(6, 'Password must be at least 6 characters'),
+})
+
+// export type InsertProductSchema = z.infer<typeof insertProductSchema>
+
+export {insertProductSchema, loginFormSchema}

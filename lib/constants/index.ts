@@ -8,4 +8,16 @@ const productsLimit = +process.env.LATEST_PRODUCTS_LIMIT! || 5
 
 const dbUrl = process.env.DATABASE_URL!
 
-export {appName, appDescription, serverUrl, productsLimit, dbUrl}
+const loginDefaultValues = {
+  email: '',
+  password: '',
+}
+
+export {
+  appName,
+  appDescription,
+  serverUrl,
+  productsLimit,
+  dbUrl,
+  loginDefaultValues,
+}

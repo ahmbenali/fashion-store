@@ -37,6 +37,7 @@
     "tsconfig.json"
   ],
   "cSpell.ignoreWords": [
+    "NEXTAUTH",
     "PGDATABASE",
     "PGHOST",
     "PGPASSWORD",

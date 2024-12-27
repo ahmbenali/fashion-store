@@ -65,6 +65,7 @@ model Account {
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
+  //  primary key combined from two fields (ex. google and googleId)
   @@id([provider, providerAccountId])
 }
 
